@@ -32,15 +32,13 @@ class Applicaiton(tk.Tk, CPU, widgetsConfigure):
         self.comboWin = ttk.Combobox(self.bar2,
                                      values=[
                                          "Спрятать",
-                                         "Отобразить",
-                                         "Мини"],
+                                         "Отобразить"],
                                      state='readonly',
                                      width=12)
         self.comboWin.current(1)
         self.comboWin.pack(side=tk.LEFT)
 
         self.windowMoveButton = ttk.Button(self.bar2, text='move', command=self.configureWin).pack(side=tk.LEFT)
-        self.trippleRightButton = ttk.Button(self.bar2, text='>>>').pack(side=tk.LEFT)
 
         self.bind_class('Tk', '<Enter>', self.enterMouse)
         self.bind_class('Tk', '<Leave>', self)
